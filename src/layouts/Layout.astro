@@ -1,0 +1,89 @@
+---
+import '../styles/global.css';
+import MobileMenu from '../components/MobileMenu';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Astrología y Consciencia" } = Astro.props;
+
+const menuItems = [
+	{ href: "#sobre-mi", text: "Sobre Mí" },
+	{ href: "#prensa", text: "Prensa" },
+	{ href: "#servicios", text: "Servicios" },
+	{ href: "/cursos", text: "Cursos" },
+	{ href: "#contacto", text: "Contacto" }
+];
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-slate-50">
+		<header class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+			<nav class="container mx-auto px-4">
+				<div class="flex justify-between items-center">
+					<a href="/" class="text-2xl font-semibold text-purple-800 -my-2">
+						<img src="/logo.png" alt="AstroConciencia" class="h-32 w-auto object-contain object-center">
+					</a>
+					{/* Menú de escritorio */}
+					<ul class="hidden md:flex gap-6">
+						{menuItems.map(item => (
+							<li>
+								<a href={item.href} class="text-[#f0123f] hover:text-[#ec6f60]">{item.text}</a>
+							</li>
+						))}
+					</ul>
+					{/* Menú móvil */}
+					<MobileMenu client:load items={menuItems} />
+				</div>
+			</nav>
+		</header>
+		<main class="pt-20">
+			<slot />
+		</main>
+		<footer class="bg-purple-900 text-white mt-20 py-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-xl font-semibold mb-4">AstroConciencia</h3>
+						<p class="text-purple-200">Descubre el poder de la astrología para tu desarrollo personal</p>
+					</div>
+					<div>
+						<h3 class="text-xl font-semibold mb-4">Contacto</h3>
+						<ul class="space-y-2 text-purple-200">
+							<li>Email: info@astroconciencia.com</li>
+							<li>Instagram: @astroconciencia</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+						<ul class="space-y-2 text-purple-200">
+							<li><a href="#sobre-mi" class="hover:text-white">Sobre Mí</a></li>
+							<li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+							<li><a href="/cursos" class="hover:text-white">Cursos</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
