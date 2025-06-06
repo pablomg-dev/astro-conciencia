@@ -29,10 +29,10 @@ const menuItems = [
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen bg-slate-50">
-		<header class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+		<header class="w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 border-b-2 border-[#f0123f]">
 			<nav class="container mx-auto px-4">
 				<div class="flex justify-between items-center">
-					<a href="/" class="text-2xl font-semibold text-purple-800 -my-2">
+					<a href="/" class="text-2xl font-semibold text-purple-800 -my-8">
 						<img 
 							src="/logo.png" 
 							alt="AstroConciencia" 
@@ -52,29 +52,29 @@ const menuItems = [
 				</div>
 			</nav>
 		</header>
-		<main class="pt-20">
+		<main>
 			<slot />
 		</main>
-		<footer class="bg-purple-900 text-white mt-20 py-8">
+		<footer class="bg-white text-black py-8">
 			<div class="container mx-auto px-4">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
 						<h3 class="text-xl font-semibold mb-4">AstroConciencia</h3>
-						<p class="text-purple-200">Descubre el poder de la astrología para tu desarrollo personal</p>
+						<p>Descubre el poder de la astrología para tu desarrollo personal</p>
 					</div>
 					<div>
 						<h3 class="text-xl font-semibold mb-4">Contacto</h3>
-						<ul class="space-y-2 text-purple-200">
+						<ul class="space-y-2">
 							<li>Email: info@astroconciencia.com</li>
-							<li>Instagram: @astroconciencia</li>
+							<li>Instagram: @astro.conciencia</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
-						<ul class="space-y-2 text-purple-200">
-							<li><a href="#sobre-mi" class="hover:text-white">Sobre Mí</a></li>
-							<li><a href="#servicios" class="hover:text-white">Servicios</a></li>
-							<li><a href="/cursos" class="hover:text-white">Cursos</a></li>
+						<ul class="space-y-2">
+							<li><a href="#sobre-mi" class="hover:text-[#ec6f60]">Sobre Mí</a></li>
+							<li><a href="#servicios" class="hover:text-[#ec6f60]">Servicios</a></li>
+							<li><a href="/cursos" class="hover:text-[#ec6f60]">Cursos</a></li>
 						</ul>
 					</div>
 				</div>
