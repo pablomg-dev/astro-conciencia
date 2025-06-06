@@ -1,1 +1,9 @@
+.font-funnel {
+    font-family: 'Funnel Display', sans-serif;
+}
+
+.font-poiret {
+    font-family: 'Poiret One', cursive;
+}
+
 @import "tailwindcss";
