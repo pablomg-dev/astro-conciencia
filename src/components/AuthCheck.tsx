@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabaseClient';
 
 interface AuthCheckProps {
     children: React.ReactNode;
@@ -10,20 +11,54 @@ export default function AuthCheck({ children }: AuthCheckProps) {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Aquí irá la lógica de autenticación con Supabase
-        // Por ahora, simulamos la autenticación
-        if (email && password) {
+        const { error } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+        });
+        if (error) {
+            setError(error.message);
+        } else {
             setIsAuthenticated(true);
             setError('');
-        } else {
-            setError('Por favor, completa todos los campos');
         }
     };
 
+    const handleLogout = async () => {
+        await supabase.auth.signOut();
+        setIsAuthenticated(false);
+    };
+
+    useEffect(() => {
+        // Chequea la sesión al montar
+        supabase.auth.getSession().then(({ data }) => {
+            setIsAuthenticated(!!data.session);
+        });
+
+        // Escucha cambios de sesión (login/logout)
+        const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+            setIsAuthenticated(!!session);
+        });
+
+        // Limpia el listener al desmontar
+        return () => {
+            listener.subscription.unsubscribe();
+        };
+    }, []);
+
     if (isAuthenticated) {
-        return <>{children}</>;
+        return (
+            <div>
+                <button
+                    onClick={handleLogout}
+                    className="mb-6 bg-gray-200 text-[#f0123f] px-4 py-2 rounded hover:bg-gray-300 transition-colors"
+                >
+                    Cerrar sesión
+                </button>
+                {children}
+            </div>
+        );
     }
 
     return (
