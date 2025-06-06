@@ -28,7 +28,7 @@ export default function AuthCheck({ children }: AuthCheckProps) {
 
     return (
         <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-center text-purple-900 mb-6">Iniciar Sesión</h2>
+            <h2 className="text-2xl font-bold text-center text-[#f0123f] mb-6">Iniciar Sesión</h2>
             {error && (
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
                     {error}
@@ -44,7 +44,7 @@ export default function AuthCheck({ children }: AuthCheckProps) {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec6f60]"
                         placeholder="tu@email.com"
                     />
                 </div>
@@ -57,17 +57,17 @@ export default function AuthCheck({ children }: AuthCheckProps) {
                         id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec6f60]"
                         placeholder="********"
                     />
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors"
+                    className="w-full bg-[#f0123f] text-white py-2 px-4 rounded-lg hover:bg-[#ec6f60] transition-colors"
                 >
                     Acceder
                 </button>
             </form>
         </div>
     );
-} 
+}
