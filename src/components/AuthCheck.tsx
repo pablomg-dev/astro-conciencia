@@ -102,6 +102,7 @@ export default function AuthCheck({ children }: AuthCheckProps) {
                         onChange={(e) => setEmail(e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec6f60]"
                         placeholder="tu@email.com"
+                        autoComplete='email'
                     />
                 </div>
                 <div>
@@ -115,6 +116,7 @@ export default function AuthCheck({ children }: AuthCheckProps) {
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec6f60]"
                         placeholder="********"
+                        autoComplete='current-password'
                     />
                 </div>
                 <button
