@@ -38,7 +38,7 @@ const menuItems = [
 
 	<body class="min-h-screen bg-slate-50 font-funnel">
 		<header
-			class="w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 border-b-2 border-[#f0123f]"
+			class="w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 border border-[#f0123f]"
 		>
 			<nav class="container mx-auto px-4">
 				<div class="flex justify-between items-center">
@@ -57,7 +57,7 @@ const menuItems = [
 								<li>
 									<a
 										href={item.href}
-										class="text-[#f0123f] hover:text-[#ec6f60]"
+										class="text-[#f0123f] hover:text-[#ec6f60] text-base md:text-lg"
 									>
 										{item.text}
 									</a>
@@ -73,7 +73,7 @@ const menuItems = [
 		<main>
 			<slot />
 		</main>
-		<footer class="bg-white text-black py-8">
+		<footer class="bg-white text-black pt-8">
 			<div class="container mx-auto px-4">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
@@ -118,7 +118,7 @@ const menuItems = [
 					</div>
 				</div>
 			</div>
-			<div class="border-t mt-8 pt-4 text-center text-sm text-gray-500">
+			<div class="border border-[#f0123f] mt-8 py-2 text-center text-sm text-black">
                 AstroConciencia &copy; 2025 &mdash; Desarrollado por 
                 <a 
                     href="https://pablomgdev.netlify.app/" 
@@ -132,4 +132,3 @@ const menuItems = [
 		</footer>
 	</body>
 </html>
-
