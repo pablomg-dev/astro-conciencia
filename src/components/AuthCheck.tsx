@@ -12,18 +12,39 @@ export default function AuthCheck({ children }: AuthCheckProps) {
     const [error, setError] = useState('');
 
     const handleLogin = async (e: React.FormEvent) => {
-        e.preventDefault();
-        const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
-        });
-        if (error) {
-            setError(error.message);
+    e.preventDefault();
+
+    // Validación de campos vacíos
+    if (!email || !password) {
+        setError('Por favor, completá todos los campos.');
+        return;
+    }
+
+    const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+    });
+
+    if (error) {
+        // Traducción de errores comunes
+        const msg = error.message.toLowerCase();
+        if (
+            msg.includes('invalid login credentials') ||
+            msg.includes('invalid') ||
+            msg.includes('email or password is incorrect')
+        ) {
+            setError('Email o contraseña inválida');
+        } else if (msg.includes('email not confirmed')) {
+            setError('Debés confirmar tu email antes de ingresar.');
         } else {
-            setIsAuthenticated(true);
-            setError('');
+            setError('Ocurrió un error. Intentá de nuevo.');
         }
-    };
+    } else {
+        setIsAuthenticated(true);
+        setError('');
+    }
+};
+
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
