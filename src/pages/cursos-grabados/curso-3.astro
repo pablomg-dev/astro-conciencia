@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CourseLayout from '../../components/CourseLayout';
+
+// Las contraseñas deberían estar en un archivo .env
+const CURSO_3_PASSWORD = import.meta.env.CURSO_3_PASSWORD;
+
+const courseData = {
+    title: "Curso 3: Astrología Avanzada",
+    description: "Explora técnicas avanzadas de interpretación astrológica y profundiza en el estudio de las casas y los nodos lunares.",
+    password: CURSO_3_PASSWORD,
+    videoId: "tu-video-id-3" // Aquí irá el ID de tu video cuando lo tengas
+};
+---
+
+<Layout title={courseData.title}>
+    <CourseLayout client:load {...courseData} />
+</Layout> 

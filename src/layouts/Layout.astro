@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import MobileMenu from "../components/MobileMenu";
+import DesktopMenu from "../components/DesktopMenu";
 
 interface Props {
 	title: string;
@@ -9,12 +10,31 @@ interface Props {
 
 const { title, description = "Astrología y Conciencia" } = Astro.props;
 
-const menuItems = [
-	{ href: "#sobre-mi", text: "Sobre Mí" },
-	{ href: "#prensa", text: "Prensa" },
-	{ href: "#servicios", text: "Servicios" },
-	{ href: "/cursos-grabados", text: "Cursos Grabados" },
-	{ href: "#contacto", text: "Contacto" },
+interface MenuItem {
+    href?: string;
+    text: string;
+    isDropdown?: boolean;
+    items?: MenuItem[];
+}
+
+// Detectar si estamos en una página de curso
+const isCursosPage = Astro.url.pathname.includes('/cursos-grabados/');
+const homePrefix = isCursosPage ? '/' : '';
+
+const menuItems: MenuItem[] = [
+	{ href: `${homePrefix}#sobre-mi`, text: "Sobre Mí" },
+	{ href: `${homePrefix}#prensa`, text: "Prensa" },
+	{ href: `${homePrefix}#servicios`, text: "Servicios" },
+	{
+		text: "Cursos Grabados",
+		isDropdown: true,
+		items: [
+			{ href: "/cursos-grabados/curso-1", text: "Curso 1" },
+			{ href: "/cursos-grabados/curso-2", text: "Curso 2" },
+			{ href: "/cursos-grabados/curso-3", text: "Curso 3" },
+		],
+	},
+	{ href: `${homePrefix}#contacto`, text: "Contacto" },
 ];
 ---
 
@@ -42,7 +62,7 @@ const menuItems = [
 		>
 			<nav class="container mx-auto px-4">
 				<div class="flex justify-between items-center">
-					<a href="/" class="-my-5 md:-my-7 lg:-my-9">
+					<a href="/" class="-my-5 md:-my-7 lg:-my-9 cursor-pointer">
 						{/* Logo */}
 						<img
 							src="/logo.png"
@@ -51,20 +71,7 @@ const menuItems = [
 						/>
 					</a>
 					{/* Menú de escritorio */}
-					<ul class="hidden md:flex gap-6">
-						{
-							menuItems.map((item) => (
-								<li>
-									<a
-										href={item.href}
-										class="text-[#f0123f] hover:text-[#ec6f60] text-base md:text-lg"
-									>
-										{item.text}
-									</a>
-								</li>
-							))
-						}
-					</ul>
+					<DesktopMenu client:load items={menuItems} />
 					{/* Menú móvil */}
 					<MobileMenu client:load items={menuItems} />
 				</div>
@@ -99,18 +106,18 @@ const menuItems = [
 						</h3>
 						<ul class="space-y-2">
 							<li>
-								<a href="#sobre-mi" class="hover:text-[#ec6f60]"
+								<a href={`${homePrefix}#sobre-mi`} class="hover:text-[#ec6f60]"
 									>Sobre Mí</a
 								>
 							</li>
 							<li>
 								<a
-									href="#servicios"
+									href={`${homePrefix}#servicios`}
 									class="hover:text-[#ec6f60]">Servicios</a
 								>
 							</li>
 							<li>
-								<a href="/cursos" class="hover:text-[#ec6f60]"
+								<a href="/cursos-grabados/curso-1" class="hover:text-[#ec6f60]"
 									>Cursos</a
 								>
 							</li>
