@@ -121,7 +121,7 @@ export default function AuthCheck({ children }: AuthCheckProps) {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-[#f0123f] text-white py-2 px-4 rounded-lg hover:bg-[#ec6f60] transition-colors"
+                    className="w-full bg-[#f0123f] text-white py-2 px-4 rounded-lg hover:bg-[#ec6f60] transition-colors cursor-pointer"
                 >
                     Acceder
                 </button>
