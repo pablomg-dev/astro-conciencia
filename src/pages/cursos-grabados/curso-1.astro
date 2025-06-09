@@ -3,16 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import CourseLayout from '../../components/CourseLayout';
 
 // Las contraseñas deberían estar en un archivo .env
-const CURSO_1_PASSWORD = import.meta.env.CURSO_1_PASSWORD || 'astro2024';
+const CURSO_1_PASSWORD = import.meta.env.CURSO_1_PASSWORD;
 
 const courseData = {
     title: "Curso 1: Introducción a la Astrología",
     description: "Descubre los fundamentos de la astrología y aprende a interpretar las energías básicas de los planetas y signos.",
     password: CURSO_1_PASSWORD,
-    videoId: "5bXbI-xQXSA"
+    videoId: "FxwOp523fjc"
 };
 ---
 
 <Layout title={courseData.title}>
     <CourseLayout client:load {...courseData} />
-</Layout> 
+</Layout>
