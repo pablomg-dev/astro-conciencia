@@ -18,7 +18,7 @@ interface MenuItem {
 }
 
 // Detectar si estamos en una página de curso
-const isCursosPage = Astro.url.pathname.includes("/cursos-grabados/");
+const isCursosPage = Astro.url.pathname.includes("/cursos/");
 const homePrefix = isCursosPage ? "/" : "";
 
 const menuItems: MenuItem[] = [
@@ -26,12 +26,12 @@ const menuItems: MenuItem[] = [
 	{ href: `${homePrefix}#prensa`, text: "Prensa" },
 	{ href: `${homePrefix}#servicios`, text: "Servicios" },
 	{
-		text: "Cursos Grabados",
+		text: "Cursos",
 		isDropdown: true,
 		items: [
-			{ href: "/cursos-grabados/curso-1", text: "Curso 1" },
-			{ href: "/cursos-grabados/curso-2", text: "Curso 2" },
-			{ href: "/cursos-grabados/curso-3", text: "Curso 3" },
+			{ href: "/cursos/taller-revolucion-solar-1", text: "Taller de Revolución Solar 1" },
+			{ href: "/cursos/taller-revolucion-solar-2", text: "Taller de Revolución Solar 2" },
+			{ href: "/cursos/curso-3", text: "Curso 3" },
 		],
 	},
 	{ href: `${homePrefix}#contacto`, text: "Contacto" },
@@ -117,8 +117,8 @@ const menuItems: MenuItem[] = [
 							</li>
 							<li>
 								<a
-									href="/cursos-grabados/curso-1"
-									class="hover:text-[#ec6f60]">Cursos</a
+									href="/cursos/taller-revolucion-solar-1"
+									class="hover:text-[#ec6f60]">Taller de Revolución Solar 1</a
 								>
 							</li>
 						</ul>
