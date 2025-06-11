@@ -45,6 +45,11 @@ const menuItems: MenuItem[] = [
             href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
+        <!-- Agregar en el <head> de tu HTML -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
     </head>
 
     <body class="min-h-screen font-funnel">
@@ -68,18 +73,23 @@ const menuItems: MenuItem[] = [
                 </div>
             </nav>
         </header>
+
         <main>
             <slot />
         </main>
+
         <footer class="bg-white text-black pt-8">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     <div>
                         <h3 class="text-xl font-semibold mb-4 text-[#ec6f60]">
                             AstroConciencia
                         </h3>
                         <p>Los Astros como guía en tu camino evolutivo</p>
                     </div>
+
                     <div class="min-w-0">
                         <h3 class="text-xl font-semibold mb-4 text-[#ec6f60]">
                             Contacto
@@ -89,6 +99,7 @@ const menuItems: MenuItem[] = [
                             <li>Instagram: @astro.conciencia</li>
                         </ul>
                     </div>
+
                     <div>
                         <h3 class="text-xl font-semibold mb-4 text-[#ec6f60]">
                             Enlaces Rápidos
@@ -106,17 +117,19 @@ const menuItems: MenuItem[] = [
                                     class="hover:text-[#ec6f60]">Servicios</a
                                 >
                             </li>
-                            {/* Se actualiza el enlace del footer para ir directamente a la página de cursos */}
+                            {
+                                /* Se actualiza el enlace del footer para ir directamente a la página de cursos */
+                            }
                             <li>
-                                <a
-                                    href="/cursos"
-                                    class="hover:text-[#ec6f60]">Cursos</a
+                                <a href="/cursos" class="hover:text-[#ec6f60]"
+                                    >Cursos</a
                                 >
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div
                 class="border border-[#f0123f] mt-8 py-2 text-center text-sm text-black"
             >
