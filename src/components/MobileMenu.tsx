@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
+
 interface MenuItem {
     href?: string;
     text: string;
-    isDropdown?: boolean;
-    items?: MenuItem[];
 }
 
 interface MobileMenuProps {
@@ -13,11 +12,6 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ items }: MobileMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
-    const handleDropdownClick = (text: string) => {
-        setOpenDropdown(openDropdown === text ? null : text);
-    };
 
     return (
         <div className="md:hidden">
@@ -44,42 +38,14 @@ export default function MobileMenu({ items }: MobileMenuProps) {
                             key={item.text}
                             className={`transform transition-all duration-300 delay-[${index * 100}ms] ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
                         >
-                            {item.isDropdown ? (
-                                <div>
-                                    <button
-                                        onClick={() => handleDropdownClick(item.text)}
-                                        className="inline-block text-[#f0123f] hover:text-[#ec6f60] py-2 transition-colors duration-300 cursor-pointer"
-                                    >
-                                        {item.text}
-                                        <span className={`ml-2 inline-block transform transition-transform ${openDropdown === item.text ? 'rotate-180' : ''}`}>
-                                            ▼
-                                        </span>
-                                    </button>
-                                    {openDropdown === item.text && item.items && (
-                                        <ul className="mt-2 space-y-2 bg-gray-50 py-2">
-                                            {item.items.map((subItem) => (
-                                                <li key={subItem.text}>
-                                                    <a
-                                                        href={subItem.href}
-                                                        className="inline-block text-[#f0123f] hover:text-[#ec6f60] py-1 transition-colors duration-300 cursor-pointer"
-                                                        onClick={() => setIsOpen(false)}
-                                                    >
-                                                        {subItem.text}
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            ) : (
-                                <a
-                                    href={item.href}
-                                    className="inline-block text-[#f0123f] hover:text-[#ec6f60] py-2 transition-colors duration-300 cursor-pointer"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {item.text}
-                                </a>
-                            )}
+
+                            <a
+                                href={item.href}
+                                className="inline-block text-[#f0123f] hover:text-[#ec6f60] py-2 transition-colors duration-300 cursor-pointer"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {item.text}
+                            </a>
                         </li>
                     ))}
                 </ul>
