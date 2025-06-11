@@ -4,12 +4,11 @@ import VideoModal from './VideoModal';
 
 interface CourseLayoutProps {
     title: string;
-    description: string;
     password: string;
     videoId: string;
 }
 
-export default function CourseLayout({ title, description, password, videoId }: CourseLayoutProps) {
+export default function CourseLayout({ title, password, videoId }: CourseLayoutProps) {
     const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
@@ -22,7 +21,6 @@ export default function CourseLayout({ title, description, password, videoId }: 
         <div className="container mx-auto px-4 py-12">
             <h1 className="text-4xl font-bold text-center text-[#ec6f60] mb-6">{title}</h1>
             <div className="max-w-2xl mx-auto">
-                <p className="text-lg text-gray-700 mb-8 text-center">{description}</p>
                 <div className="flex justify-center">
                     <button
                         onClick={() => setIsPasswordModalOpen(true)}

@@ -3,15 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import CourseLayout from '../components/CourseLayout';
 
 const CURSO_1_PASSWORD = import.meta.env.CURSO_1_PASSWORD;
+const CURSO_2_PASSWORD = import.meta.env.CURSO_2_PASSWORD;
 
-const courseData = {
-    title: "Taller de Revolución Solar",
-    description: "",
+const courseData1 = {
+    title: "Taller de Revolución Solar - Clase 1",
+    // description: "Clase-1",
     password: CURSO_1_PASSWORD,
     videoId: "vIyOX6vSVvo"
 };
+
+const courseData2 = {
+    title: "Taller de Revolución Solar - Clase 2",
+    // description: "Clase-2",
+    password: CURSO_2_PASSWORD,
+    videoId: "FxwOp523fjc"
+};
 ---
 
-<Layout title={courseData.title}>
-    <CourseLayout client:load {...courseData} />
+<Layout title={courseData1.title}>
+    <CourseLayout client:load {...courseData1} />
+    <CourseLayout client:load {...courseData2} />
 </Layout> 
