@@ -19,7 +19,7 @@ export default function CourseLayout({ title, password, videoId }: CourseLayoutP
 
     return (
         <div className="container mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold text-center text-[#ec6f60] mb-6">{title}</h1>
+            <h1 className="text-3xl font-bold text-center text-[#ec6f60] mb-6">{title}</h1>
             <div className="max-w-2xl mx-auto">
                 <div className="flex justify-center">
                     <button
