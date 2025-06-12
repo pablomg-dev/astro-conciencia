@@ -117,96 +117,136 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
 
     <section id="prensa" class="py-20 bg-[#ec6f60]">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">
-                Prensa
-            </h2>
+            <AnimatedSection client:load direction="up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">
+                    Prensa
+                </h2>
+            </AnimatedSection>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Aquí irán las apariciones en prensa */}
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">
-                        Título del Artículo
-                    </h3>
-                    <p class="text-gray-700">
-                        Descripción breve del artículo o aparición en prensa
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.3}>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Título del Artículo
+                        </h3>
+                        <p class="text-gray-700">
+                            Descripción breve del artículo o aparición en prensa
+                        </p>
+                    </div>
+                </AnimatedSection>
+                <AnimatedSection client:load direction="up" delay={0.4}>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Título del Artículo
+                        </h3>
+                        <p class="text-gray-700">
+                            Descripción breve del artículo o aparición en prensa
+                        </p>
+                    </div>
+                </AnimatedSection>
+                <AnimatedSection client:load direction="up" delay={0.5}>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Título del Artículo
+                        </h3>
+                        <p class="text-gray-700">
+                            Descripción breve del artículo o aparición en prensa
+                        </p>
+                    </div>
+                </AnimatedSection>
             </div>
         </div>
     </section>
 
     <section id="servicios" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-black">
-                Servicios
-            </h2>
+            <AnimatedSection client:load direction="up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-black">
+                    Servicios
+                </h2>
+            </AnimatedSection>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">
-                        Lectura de Carta Natal
-                    </h3>
-                    <p class="text-gray-700 font-inter">
-                        Es una foto del cielo en el momento en que nacimos y
-                        cómo nos influyen esas energias. Es una guía, una
-                        brújula, que nos indica cuál es el camino a seguir.
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.3}>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">
+                            Lectura de Carta Natal
+                        </h3>
+                        <p class="text-gray-700 font-inter">
+                            Es una foto del cielo en el momento en que nacimos y
+                            cómo nos influyen esas energias. Es una guía, una
+                            brújula, que nos indica cuál es el camino a seguir.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">
-                        Lectura de Revolución Solar
-                    </h3>
-                    <p class="text-gray-700 font-inter">
-                        A través de esta técnica se calcula la carta anual, que
-                        va de cumpleaños a cumpleaños, y nos muestra el
-                        aprendizaje que tendremos ese año y qué energías estarán
-                        disponibles.
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.4}>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">
+                            Lectura de Revolución Solar
+                        </h3>
+                        <p class="text-gray-700 font-inter">
+                            A través de esta técnica se calcula la carta anual, que
+                            va de cumpleaños a cumpleaños, y nos muestra el
+                            aprendizaje que tendremos ese año y qué energías estarán
+                            disponibles.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">
-                        Sinastría de de parejas
-                    </h3>
-                    <p class="text-gray-700 font-inter">
-                        Este método consiste en la comparación de dos cartas
-                        natales, sirve para saber cómo interactuan las energías
-                        de los integrantes de una sociedad o pareja. Ver
-                        energías afines y aspectos a trabajar entre ellos.
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.5}>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">
+                            Sinastría de de parejas
+                        </h3>
+                        <p class="text-gray-700 font-inter">
+                            Este método consiste en la comparación de dos cartas
+                            natales, sirve para saber cómo interactuan las energías
+                            de los integrantes de una sociedad o pareja. Ver
+                            energías afines y aspectos a trabajar entre ellos.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Astrogenealogía</h3>
-                    <p class="text-gray-700 font-inter">
-                        Consiste en la lectura de la carta natal desde la mirada
-                        astrogenealógica, sirve para comprender qué lugar
-                        ocupamos dentro del clan familiar, cuales es nuestra
-                        misión y que lealtades, mandados, conductas heredamos.
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.3}>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Astrogenealogía</h3>
+                        <p class="text-gray-700 font-inter">
+                            Consiste en la lectura de la carta natal desde la mirada
+                            astrogenealógica, sirve para comprender qué lugar
+                            ocupamos dentro del clan familiar, cuales es nuestra
+                            misión y que lealtades, mandados, conductas heredamos.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Bioneuroemoción</h3>
-                    <p class="text-gray-700 font-inter">
-                        La Bioneuroemoción, creada por Enric Corbera, es un
-                        método que te ayuda a comprender y gestionar tus
-                        emociones para poder detectar aquello que te estresa o
-                        genera conflicto. Teniendo como objetivo alcanzar la
-                        coherencia emocional y el bienestar fisico y emocional.
-                    </p>
-                </div>
+                <AnimatedSection client:load direction="up" delay={0.4}>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Bioneuroemoción</h3>
+                        <p class="text-gray-700 font-inter">
+                            La Bioneuroemoción, creada por Enric Corbera, es un
+                            método que te ayuda a comprender y gestionar tus
+                            emociones para poder detectar aquello que te estresa o
+                            genera conflicto. Teniendo como objetivo alcanzar la
+                            coherencia emocional y el bienestar fisico y emocional.
+                        </p>
+                    </div>
+                </AnimatedSection>
             </div>
         </div>
     </section>
 
     <section id="contacto" class="py-20 bg-[#ec6f60]">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">
-                Contacto
-            </h2>
+            <AnimatedSection client:load direction="up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">
+                    Contacto
+                </h2>
+            </AnimatedSection>
             <div class="max-w-md mx-auto text-center">
-                <div class="space-y-4">
+                {/* Eliminamos el space-y del div contenedor ya que AnimatedSection lo "interrumpe" */}
+                
+                <AnimatedSection client:load direction="up" delay={0.2} className="mb-4"> {/* Añadimos mb-4 aquí */}
                     <a
                         href="https://www.instagram.com/astro.conciencia/"
                         target="_blank"
@@ -214,7 +254,6 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                         aria-label="Visitar perfil de Instagram @astro.conciencia"
                         class="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 border border-gray-100"
                     >
-                        <!-- Icono de Instagram con Font Awesome -->
                         <div class="flex items-center gap-3 mb-2">
                             <i
                                 class="fab fa-instagram text-2xl text-pink-500"
@@ -228,7 +267,6 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                             @astro.conciencia
                         </p>
 
-                        <!-- Indicador visual de enlace externo -->
                         <div
                             class="mt-3 flex items-center text-sm text-gray-500"
                         >
@@ -248,7 +286,9 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                             </svg>
                         </div>
                     </a>
+                </AnimatedSection>
 
+                <AnimatedSection client:load direction="up" delay={0.3}>
                     <a
                         href="#"
                         target="_blank"
@@ -256,7 +296,6 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                         aria-label="Ver todos mis enlaces en Linktree"
                         class="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 border border-gray-100"
                     >
-                        <!-- Icono de Linktree con Font Awesome -->
                         <div class="flex items-center gap-3 mb-2">
                             <i
                                 class="fas fa-link text-2xl text-green-500"
@@ -270,7 +309,6 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                             Todos mis enlaces
                         </p>
 
-                        <!-- Elementos visuales adicionales -->
                         <div class="flex items-center justify-between">
                             <div
                                 class="flex items-center text-sm text-gray-500"
@@ -291,7 +329,6 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                                 </svg>
                             </div>
 
-                            <!-- Indicador visual de múltiples enlaces -->
                             <div class="flex space-x-1">
                                 <div class="w-2 h-2 bg-green-400 rounded-full">
                                 </div>
@@ -304,7 +341,7 @@ import AnimatedSection from "../components/AnimatedSection.tsx";
                             </div>
                         </div>
                     </a>
-                </div>
+                </AnimatedSection>
             </div>
         </div>
     </section>
