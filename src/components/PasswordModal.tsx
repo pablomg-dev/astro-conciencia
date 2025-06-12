@@ -57,4 +57,4 @@ export default function PasswordModal({ isOpen, onClose, onSuccess, coursePasswo
             </div>
         </div>
     );
-} 
+}

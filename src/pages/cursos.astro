@@ -7,20 +7,18 @@ const CURSO_2_PASSWORD = import.meta.env.CURSO_2_PASSWORD;
 
 const courseData1 = {
     title: "Taller de Revolución Solar - Clase 1",
-    // description: "Clase-1",
     password: CURSO_1_PASSWORD,
     videoId: "vIyOX6vSVvo"
 };
 
 const courseData2 = {
     title: "Taller de Revolución Solar - Clase 2",
-    // description: "Clase-2",
     password: CURSO_2_PASSWORD,
     videoId: "FxwOp523fjc"
 };
 ---
 
-<Layout title={courseData1.title}>
+<Layout title="Cursos">
     <CourseLayout client:load {...courseData1} />
     <CourseLayout client:load {...courseData2} />
-</Layout> 
+</Layout>
