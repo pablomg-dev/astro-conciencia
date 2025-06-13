@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
+import ScrollToTop from "../components/ScrollToTop";
 
 interface Props {
     title: string;
@@ -77,6 +78,8 @@ const menuItems: MenuItem[] = [
         <main>
             <slot />
         </main>
+
+        <ScrollToTop client:load />
 
         <footer class="bg-white text-black pt-8">
             <div class="container mx-auto px-4">
