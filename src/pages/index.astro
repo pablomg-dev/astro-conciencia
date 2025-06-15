@@ -116,42 +116,6 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
         </div>
     </section>
 
-    <section id="prensa" class="py-20 bg-[#ec6f60]">
-        <div class="container mx-auto px-4">
-            <AnimatedSection client:load direction="up">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">
-                    Prensa
-                </h2>
-            </AnimatedSection>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <AnimatedSection client:load direction="up" delay={0.3}>
-                    <PressVideoModal 
-                        client:load
-                        videoId="m_si9zokguk"
-                        title="Aparición en Crónica TV"
-                        thumbnail="https://img.youtube.com/vi/m_si9zokguk/maxresdefault.jpg"
-                    />
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.4}>
-                    <PressVideoModal 
-                        client:load
-                        videoId="swmyxAZybIc"
-                        title="IG Live con Claudio María Domínguez"
-                        thumbnail="https://img.youtube.com/vi/swmyxAZybIc/maxresdefault.jpg"
-                    />
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.5}>
-                    <PressVideoModal 
-                        client:load
-                        videoId="alsD_OoGAmw"
-                        title="La Carta Natal con Marcela Tauro"
-                        thumbnail="https://img.youtube.com/vi/alsD_OoGAmw/maxresdefault.jpg"
-                    />
-                </AnimatedSection>
-            </div>
-        </div>
-    </section>
-
     <section id="servicios" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <AnimatedSection client:load direction="up">
@@ -163,10 +127,10 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <AnimatedSection client:load direction="up" delay={0.3}>
                     <div class="bg-cyan-500 p-6 rounded-lg">
-                        <h3 class="text-white text-xl font-semibold mb-4">
+                        <h3 class="text-black text-xl font-semibold mb-4">
                             Lectura de Carta Natal
                         </h3>
-                        <p class="text-white font-inter">
+                        <p class="text-black font-inter">
                             Es una foto del cielo en el momento en que nacimos y
                             cómo nos influyen esas energias. Es una guía, una
                             brújula, que nos indica cuál es el camino a seguir.
@@ -176,55 +140,98 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
 
                 <AnimatedSection client:load direction="up" delay={0.4}>
                     <div class="bg-cyan-500 p-6 rounded-lg">
-                        <h3 class="text-white text-xl font-semibold mb-4">
+                        <h3 class="text-black text-xl font-semibold mb-4">
                             Lectura de Revolución Solar
                         </h3>
-                        <p class="text-white font-inter">
-                            A través de esta técnica se calcula la carta anual, que
-                            va de cumpleaños a cumpleaños, y nos muestra el
-                            aprendizaje que tendremos ese año y qué energías estarán
-                            disponibles.
+                        <p class="text-black font-inter">
+                            A través de esta técnica se calcula la carta anual,
+                            que va de cumpleaños a cumpleaños, y nos muestra el
+                            aprendizaje que tendremos ese año y qué energías
+                            estarán disponibles.
                         </p>
                     </div>
                 </AnimatedSection>
 
                 <AnimatedSection client:load direction="up" delay={0.5}>
                     <div class="bg-cyan-500 p-6 rounded-lg">
-                        <h3 class="text-white text-xl font-semibold mb-4">
+                        <h3 class="text-black text-xl font-semibold mb-4">
                             Sinastría de de parejas
                         </h3>
-                        <p class="text-white font-inter">
+                        <p class="text-black font-inter">
                             Este método consiste en la comparación de dos cartas
-                            natales, sirve para saber cómo interactuan las energías
-                            de los integrantes de una sociedad o pareja. Ver
-                            energías afines y aspectos a trabajar entre ellos.
+                            natales, sirve para saber cómo interactuan las
+                            energías de los integrantes de una sociedad o
+                            pareja. Ver energías afines y aspectos a trabajar
+                            entre ellos.
                         </p>
                     </div>
                 </AnimatedSection>
 
                 <AnimatedSection client:load direction="up" delay={0.3}>
                     <div class="bg-cyan-500 p-6 rounded-lg">
-                        <h3 class="text-white text-xl font-semibold mb-4">Astrogenealogía</h3>
-                        <p class="text-white font-inter">
-                            Consiste en la lectura de la carta natal desde la mirada
-                            astrogenealógica, sirve para comprender qué lugar
-                            ocupamos dentro del clan familiar, cuales es nuestra
-                            misión y que lealtades, mandados, conductas heredamos.
+                        <h3 class="text-black text-xl font-semibold mb-4">
+                            Astrogenealogía
+                        </h3>
+                        <p class="text-black font-inter">
+                            Consiste en la lectura de la carta natal desde la
+                            mirada astrogenealógica, sirve para comprender qué
+                            lugar ocupamos dentro del clan familiar, cuales es
+                            nuestra misión y que lealtades, mandados, conductas
+                            heredamos.
                         </p>
                     </div>
                 </AnimatedSection>
 
                 <AnimatedSection client:load direction="up" delay={0.4}>
                     <div class="bg-cyan-500 p-6 rounded-lg">
-                        <h3 class="text-white text-xl font-semibold mb-4">Bioneuroemoción</h3>
-                        <p class="text-white font-inter">
+                        <h3 class="text-black text-xl font-semibold mb-4">
+                            Bioneuroemoción
+                        </h3>
+                        <p class="text-black font-inter">
                             La Bioneuroemoción, creada por Enric Corbera, es un
                             método que te ayuda a comprender y gestionar tus
-                            emociones para poder detectar aquello que te estresa o
-                            genera conflicto. Teniendo como objetivo alcanzar la
-                            coherencia emocional y el bienestar fisico y emocional.
+                            emociones para poder detectar aquello que te estresa
+                            o genera conflicto. Teniendo como objetivo alcanzar
+                            la coherencia emocional y el bienestar fisico y
+                            emocional.
                         </p>
                     </div>
+                </AnimatedSection>
+            </div>
+        </div>
+    </section>
+
+    <section id="prensa" class="py-20 bg-[#ec6f60]">
+        <div class="container mx-auto px-4">
+            <AnimatedSection client:load direction="up">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">
+                    Prensa
+                </h2>
+            </AnimatedSection>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <AnimatedSection client:load direction="up" delay={0.3}>
+                    <PressVideoModal
+                        client:load
+                        videoId="m_si9zokguk"
+                        title="Aparición en Crónica TV"
+                        thumbnail="https://img.youtube.com/vi/m_si9zokguk/maxresdefault.jpg"
+                    />
+                </AnimatedSection>
+                <AnimatedSection client:load direction="up" delay={0.4}>
+                    <PressVideoModal
+                        client:load
+                        videoId="swmyxAZybIc"
+                        title="IG Live con Claudio María Domínguez"
+                        thumbnail="https://img.youtube.com/vi/swmyxAZybIc/maxresdefault.jpg"
+                    />
+                </AnimatedSection>
+                <AnimatedSection client:load direction="up" delay={0.5}>
+                    <PressVideoModal
+                        client:load
+                        videoId="alsD_OoGAmw"
+                        title="La Carta Natal con Marcela Tauro"
+                        thumbnail="https://img.youtube.com/vi/alsD_OoGAmw/maxresdefault.jpg"
+                    />
                 </AnimatedSection>
             </div>
         </div>
@@ -238,9 +245,13 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
                 </h2>
             </AnimatedSection>
             <div class="max-w-md mx-auto text-center">
-                {/* Eliminamos el space-y del div contenedor ya que AnimatedSection lo "interrumpe" */}
-                
-                <AnimatedSection client:load direction="up" delay={0.2} className="mb-4"> {/* Añadimos mb-4 aquí */}
+                <AnimatedSection
+                    client:load
+                    direction="up"
+                    delay={0.2}
+                    className="mb-4"
+                >
+                    {/* Añadimos mb-4 aquí */}
                     <a
                         href="https://www.instagram.com/astro.conciencia/"
                         target="_blank"
