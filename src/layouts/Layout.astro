@@ -3,6 +3,7 @@ import "../styles/global.css";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
 import ScrollToTop from "../components/ScrollToTop";
+import SmoothScroll from "../components/SmoothScroll";
 
 interface Props {
     title: string;
@@ -46,11 +47,27 @@ const menuItems: MenuItem[] = [
             href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
-        <!-- Agregar en el <head> de tu HTML -->
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
+        <!-- SEO Mejorado -->
+        <meta name="keywords" content="astrología, astrología psicológica, carta natal, revolución solar, sinastría, bioneuroemoción, talleres de astrología, Carolina Guerrero, AstroConciencia, autoconocimiento, astrología argentina" />
+        <meta name="author" content="Carolina Guerrero" />
+        <link rel="canonical" href="https://astroconciencia.com/" />
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://astroconciencia.com/" />
+        <meta property="og:image" content="https://astroconciencia.com/logo.png" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://astroconciencia.com/logo.png" />
+        <meta name="twitter:site" content="@astro.conciencia" />
     </head>
 
     <body class="min-h-screen font-funnel">
@@ -80,6 +97,7 @@ const menuItems: MenuItem[] = [
         </main>
 
         <ScrollToTop client:load />
+        <SmoothScroll client:load />
 
         <footer class="bg-white text-black pt-8">
             <div class="container mx-auto px-4">
@@ -100,6 +118,7 @@ const menuItems: MenuItem[] = [
                         <ul class="space-y-2">
                             <li>Email: astroconcienciacosmica@gmail.com</li>
                             <li>Instagram: @astro.conciencia</li>
+                            <li>WhatsApp: (54) 11-5846-3467</li>
                         </ul>
                     </div>
 

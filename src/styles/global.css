@@ -7,3 +7,20 @@
 .font-inter {
     font-family: "Inter", sans-serif;
 }
+
+/* Scroll suave global */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejorar la experiencia de scroll en dispositivos móviles */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Asegurar que los anclajes tengan scroll-padding para el header fijo */
+:target {
+    scroll-margin-top: 120px; /* Ajustar según la altura del header */
+}

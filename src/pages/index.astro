@@ -29,89 +29,107 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
                     Sobre Mí
                 </h2>
             </AnimatedSection>
-            <div class="max-w-3xl mx-auto text-lg text-gray-700 font-inter">
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Mi nombre completo es Carolina Guerrero; soy Licenciada
-                        en Comercio Internacional y Astróloga.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Hace más de 12 años comencé a interesarme por el mundo
-                        de la Astrología. Sin duda, es una herramienta que me
-                        transformó y la recomiendo a otros para autoconocerse y
-                        evolucionar.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Me he formado en distintas escuelas astrológicas como
-                        Casa XI, Multiespacio Evolutivo (Escuela de Lenguajes
-                        Simbólicos) y Casa Uroboros (Astrología Arquetipal
-                        Junguiana).
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Además, cuento con un Posgrado en Sinastría (Casa XI),
-                        Posgrado en Astrología Psicológica (Astrología y
-                        Psicología), Taller de Revolución Solar - Astrología
-                        Predictiva (Patricia Kesselman), Taller de
-                        Interpretación de Revolución Solar (Mercurio Dice),
-                        Curso de Astronomía para Astrólogos (Fundación CABA),
-                        Curso de Astrogenealogía (Escuela
-                        Astronoconstelaciones), Curso de Astrología Kármica
-                        (Escuela Astroflor), Curso de Tarot Evolutivo y
-                        Terapéutico (Fabián Maglio) y Curso de Psicología
-                        Transpersonal (Alquimia Espiritual).
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        También cuento con un Posgrado en Bioneuroemoción,
-                        egresada de @EnricCorberaInstitute (Barcelona).
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        En el año 2017 empecé a hacer consultas de Carta Natal,
-                        Revolución Solar y Sinastrías. Cuento con más de 1000
-                        lecturas realizadas en América Latina y España.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Desde 2019 brindo clases y talleres de Astrología
-                        Psicológica.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        He participado en programas de TV en Crónica TV, fui
-                        entrevistada por profesionales como Claudio María
-                        Domínguez y Marcela Tauro. También participé en varias
-                        radios.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        En 2022 me he dado el lujo de tener mi propio programa
-                        de radio.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p class="mb-6">
-                        Además, ofrezco asesoría para empresas a través de
-                        Astrología Empresarial.
-                    </p>
-                </AnimatedSection>
-                <AnimatedSection client:load direction="up" delay={0.2}>
-                    <p>
-                        💫 ¡Gracias por acompañarme en este camino apasionante!
-                        💫
-                    </p>
-                </AnimatedSection>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Imagen -->
+                    <AnimatedSection client:load direction="left" delay={0.1}>
+                        <div class="relative lg:pr-8">
+                            <img 
+                                src="/src/assets/img2.png" 
+                                alt="Carolina Guerrero - Astróloga" 
+                                class="w-full h-auto lg:h-[800px] rounded-lg shadow-lg object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </AnimatedSection>
+                    
+                    <!-- Texto -->
+                    <div class="text-lg text-gray-700 font-inter">
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Mi nombre completo es Carolina Guerrero; soy Licenciada
+                                en Comercio Internacional y Astróloga.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Hace más de 12 años comencé a interesarme por el mundo
+                                de la Astrología. Sin duda, es una herramienta que me
+                                transformó y la recomiendo a otros para autoconocerse y
+                                evolucionar.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Me he formado en distintas escuelas astrológicas como
+                                Casa XI, Multiespacio Evolutivo (Escuela de Lenguajes
+                                Simbólicos) y Casa Uroboros (Astrología Arquetipal
+                                Junguiana).
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Además, cuento con un Posgrado en Sinastría (Casa XI),
+                                Posgrado en Astrología Psicológica (Astrología y
+                                Psicología), Taller de Revolución Solar - Astrología
+                                Predictiva (Patricia Kesselman), Taller de
+                                Interpretación de Revolución Solar (Mercurio Dice),
+                                Curso de Astronomía para Astrólogos (Fundación CABA),
+                                Curso de Astrogenealogía (Escuela
+                                Astronoconstelaciones), Curso de Astrología Kármica
+                                (Escuela Astroflor), Curso de Tarot Evolutivo y
+                                Terapéutico (Fabián Maglio) y Curso de Psicología
+                                Transpersonal (Alquimia Espiritual).
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                También cuento con un Posgrado en Bioneuroemoción,
+                                egresada de @EnricCorberaInstitute (Barcelona).
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                En el año 2017 empecé a hacer consultas de Carta Natal,
+                                Revolución Solar y Sinastrías. Cuento con más de 1000
+                                lecturas realizadas en América Latina y España.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Desde 2019 brindo clases y talleres de Astrología
+                                Psicológica.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                He participado en programas de TV en Crónica TV, fui
+                                entrevistada por profesionales como Claudio María
+                                Domínguez y Marcela Tauro. También participé en varias
+                                radios.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                En 2022 me he dado el lujo de tener mi propio programa
+                                de radio.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p class="mb-6">
+                                Además, ofrezco asesoría para empresas a través de
+                                Astrología Empresarial.
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection client:load direction="up" delay={0.2}>
+                            <p>
+                                💫 ¡Gracias por acompañarme en este camino apasionante!
+                                💫
+                            </p>
+                        </AnimatedSection>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -251,7 +269,6 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
                     delay={0.2}
                     className="mb-4"
                 >
-                    {/* Añadimos mb-4 aquí */}
                     <a
                         href="https://www.instagram.com/astro.conciencia/"
                         target="_blank"
@@ -290,35 +307,42 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
                                 ></path>
                             </svg>
                         </div>
+
+                        <div class="flex space-x-1 mt-2 justify-end">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                            <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                        </div>
                     </a>
                 </AnimatedSection>
 
                 <AnimatedSection client:load direction="up" delay={0.3}>
                     <a
-                        href="#"
+                        href="https://wa.me/5491158463467"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver todos mis enlaces en Linktree"
+                        aria-label="Contactar por WhatsApp"
                         class="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 border border-gray-100"
                     >
                         <div class="flex items-center gap-3 mb-2">
                             <i
-                                class="fas fa-link text-2xl text-green-500"
+                                class="fab fa-whatsapp text-2xl text-green-500"
                                 aria-hidden="true"></i>
                             <h3 class="text-xl font-semibold text-gray-800">
-                                Linktree
+                                WhatsApp
                             </h3>
                         </div>
 
                         <p class="text-gray-600 font-medium mb-3">
-                            Todos mis enlaces
+                            Contacto directo
                         </p>
 
                         <div class="flex items-center justify-between">
                             <div
                                 class="flex items-center text-sm text-gray-500"
                             >
-                                <span>Ver enlaces</span>
+                                <span>Enviar mensaje</span>
                                 <svg
                                     class="w-4 h-4 ml-1"
                                     fill="none"
@@ -337,11 +361,11 @@ import PressVideoModal from "../components/PressVideoModal.tsx";
                             <div class="flex space-x-1">
                                 <div class="w-2 h-2 bg-green-400 rounded-full">
                                 </div>
-                                <div class="w-2 h-2 bg-blue-400 rounded-full">
+                                <div class="w-2 h-2 bg-green-500 rounded-full">
                                 </div>
-                                <div class="w-2 h-2 bg-purple-400 rounded-full">
+                                <div class="w-2 h-2 bg-green-600 rounded-full">
                                 </div>
-                                <div class="w-2 h-2 bg-pink-400 rounded-full">
+                                <div class="w-2 h-2 bg-green-700 rounded-full">
                                 </div>
                             </div>
                         </div>
