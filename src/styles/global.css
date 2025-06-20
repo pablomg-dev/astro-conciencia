@@ -8,6 +8,10 @@
     font-family: "Inter", sans-serif;
 }
 
+.font-limelight {
+    font-family: 'Limelight', cursive;
+}
+
 /* Scroll suave global */
 html {
     scroll-behavior: smooth;
